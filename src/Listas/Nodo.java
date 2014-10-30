@@ -4,6 +4,7 @@ public class Nodo {
 private int cantidad;
 private String tipo;
 private Nodo siguiente;
+
 public Nodo(int cantidad, String tipo){
 	this.setCantidad(cantidad);
 	this.setTipo(tipo);
@@ -24,7 +25,6 @@ public String getTipo() {
 public void setTipo(String tipo) {
 	this.tipo = tipo;
 }
-
 
 public Nodo getSiguiente() {
 	return siguiente;

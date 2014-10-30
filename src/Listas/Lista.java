@@ -2,6 +2,8 @@ package Listas;
 
 public class Lista {
 private Nodo cabeza;
+private int vagoncarbon;
+private int vagonpasajero;
 
 public Lista(){
 	cabeza=null;
@@ -20,8 +22,40 @@ public void Agregar(int cantidad, String tipo){
 		nuevo.setSiguiente(nodo1);
 		nodo1.setSiguiente(new Nodo(0,"4"));
 		
+	}		
+}
+
+//elimina el primero de la lista
+public void EliminarInicial(){
+		cabeza = null;
+}
+
+public void Subirtodos(){
+	Nodo subir= cabeza;
+	while(subir!=null || subir.getTipo()=="2"){
+		if (nuevo.getcantidad<=10){
+			
+		}
 	}
+	
+	if (nuevo.getCantidad==40){
 		
+	}
+}
+
+public void Bajartodos(){
+	
+}
+
+//eliminar posición
+public void Eliminar(){
+	Nodo tmp=cabeza;
+	Nodo nuevo=cabeza;
+	if (tmp!=null){
+		tmp.setSiguiente(nuevo.getSiguiente().getSiguiente());		
+	}else{
+		System.out.println("No hay vagones");
+	}	
 }
 
 public void Imprimir(){
@@ -31,6 +65,7 @@ public void Imprimir(){
 	}
 }
 
+//regresa el total de elementos de la lista
 public int Tamano(){
 	Nodo imprimir;
 	int dartamano=0;
@@ -38,8 +73,7 @@ public int Tamano(){
 	for(imprimir=getCabeza(); imprimir != null; imprimir=imprimir.getSiguiente()){
 		dartamano++;
 		
-	}	return dartamano;
-	
+	}	return dartamano;	
 }
 
 private Nodo getCabeza() {
@@ -49,10 +83,4 @@ private Nodo getCabeza() {
 private void setCabeza(Nodo cabeza) {
 	this.cabeza = cabeza;
 }
-
 }
-
-
-
-
-
